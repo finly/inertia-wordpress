@@ -51,9 +51,9 @@ if ( !class_exists ( 'IwHelper' ) ) {
 
             if ( isset ( $headers [ 'X-Requested-With' ] ) && $headers [ 'X-Requested-With' ] === 'XMLHttpRequest' && isset ( $headers [ 'X-Inertia' ] ) && $headers [ 'X-Inertia' ] === 'true' ) {
                 self::$isInertiaRequest = true;
+            } else {
+                self::$isInertiaRequest = false;
             }
-
-            self::$isInertiaRequest = false;
 
         }
 
